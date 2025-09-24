@@ -1,0 +1,53 @@
+/*
+  Localizable.strings
+  MyiApp
+
+  Created by 조영민 on 5/21/25.
+  
+*/
+
+// Hungry Tips
+"hungryTip1" = "수유 간격이 너무 길지 않았는지 체크해보세요.";
+"hungryTip2" = "수유 자세가 편안한지 점검해 주세요.";
+"hungryTip3" = "수유 양이 충분한지 확인해보세요.";
+
+// Tired Tips
+"tiredTip1" = "조용하고 어두운 환경을 만들어 주세요.";
+"tiredTip2" = "아기에게 익숙한 수면 루틴을 적용해보세요.";
+"tiredTip3" = "과한 자극 없이 차분하게 안아주세요.";
+
+// Scared Tips
+"scaredTip1" = "아기를 꼭 안고 부드럽게 말 걸어주세요.";
+"scaredTip2" = "낯선 환경이라면 익숙한 물건을 보여주세요.";
+"scaredTip3" = "갑작스러운 소리나 빛을 차단해 주세요.";
+
+// Lonely Tips
+"lonelyTip1" = "눈을 마주치고 미소를 지어주세요.";
+"lonelyTip2" = "짧은 시간이라도 함께 시간을 보내 주세요.";
+"lonelyTip3" = "음성 자극으로 안정감을 주세요.";
+
+// Burping Tips
+"burpingTip1" = "수유 후 바로 트림을 도와주세요.";
+"burpingTip2" = "등을 토닥이며 어깨에 기대게 해주세요.";
+"burpingTip3" = "아기를 앉혀서 살짝 앞으로 숙이는 자세도 좋아요.";
+
+// Belly Pain Tips
+"bellyPainTip1" = "배를 시계 방향으로 살살 마사지해 주세요.";
+"bellyPainTip2" = "양 다리를 접어 아기 배 쪽으로 살짝 눌러보세요.";
+"bellyPainTip3" = "기저귀가 너무 조이지 않았는지 확인해 주세요.";
+
+// Cold/Hot Tips
+"coldHotTip1" = "손과 발이 너무 차갑거나 덥지 않은지 확인해 주세요.";
+"coldHotTip2" = "실내 온도는 22°C~24°C를 유지하세요.";
+"coldHotTip3" = "옷이 너무 두껍거나 얇지 않은지 확인해 주세요.";
+
+// Discomfort Tips
+"discomfortTip1" = "기저귀가 젖었는지 확인해 주세요.";
+"discomfortTip2" = "옷에 껄끄러운 태그나 주름이 없는지 확인하세요.";
+"discomfortTip3" = "아기가 특정 자세를 싫어하는지 관찰해보세요.";
+
+// Unknown Tips
+"unknownTip1" = "주변이 시끄러운지 확인해주세요.";
+"unknownTip2" = "소리가 마이크에 잘 입력되는지 점검해보세요.";
+"unknownTip3" = "조용한 환경에서 사용하시는 걸 권장합니다.";
+
