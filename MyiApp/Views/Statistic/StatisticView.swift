@@ -95,27 +95,78 @@ struct StatisticView: View {
                                 .bold()
                             Spacer()
                             
-                            NavigationLink(destination: GrowthChartView(baby: baby, records: records)) {
-                                Image(systemName: "chart.xyaxis.line")
-                                    .foregroundColor(.primary)
-                                    .font(.title2)
-                            }
-                            
-                            Image(systemName: "square.and.arrow.up")
-                                .foregroundColor(.primary)
-                                .font(.title2)
-                                .onTapGesture {
-                                    DispatchQueue.main.async {
-                                        let babyInfoView = BabyInfoCardView(baby: baby, records: records, selectedDate: selectedDate)
-                                        let image = babyInfoView.asUIImage()
-                                        
-                                        self.previewImage = IdentifiableImage(image: image)
-                                        
-                                        let formatter = DateFormatter()
-                                        formatter.dateFormat = "yyyyMMdd"
-                                        self.fileNameInput = "\(formatter.string(from: selectedDate))_기록 분석"
+                            if #available(iOS 26.0, *) {
+                                GlassEffectContainer {
+                                    NavigationLink(destination: GrowthChartView(baby: baby, records: records)) {
+                                        Image(systemName: "chart.xyaxis.line")
+                                            .foregroundColor(.primary)
+                                            .font(.title2)
+                                            .frame(width: 44, height: 44)
+                                            .background(Color.clear)
+                                            .contentShape(Rectangle())
+                                    }
+                                    
+                                    Button(action: {
+                                        DispatchQueue.main.async {
+                                            let babyInfoView = BabyInfoCardView(baby: baby, records: records, selectedDate: selectedDate)
+                                            let image = babyInfoView.asUIImage()
+                                            
+                                            self.previewImage = IdentifiableImage(image: image)
+                                            
+                                            let formatter = DateFormatter()
+                                            formatter.dateFormat = "yyyyMMdd"
+                                            self.fileNameInput = "\(formatter.string(from: selectedDate))_기록 분석"
+                                        }
+                                    }) {
+                                        Image(systemName: "square.and.arrow.up")
+                                            .foregroundColor(.primary)
+                                            .font(.title2)
+                                            .frame(width: 44, height: 44)
+                                            .background(Color.clear)
+                                            .contentShape(Rectangle())
                                     }
                                 }
+                                .glassEffect()
+                            } else {
+                                if #available(iOS 26.0, *) {
+                                    NavigationLink(destination: GrowthChartView(baby: baby, records: records)) {
+                                        Image(systemName: "chart.xyaxis.line")
+                                            .foregroundColor(.primary)
+                                            .font(.title2)
+                                            .frame(width: 44, height: 44)
+                                            .background(Color.clear)
+                                            .contentShape(Rectangle())
+                                    }
+                                    .glassEffect()
+                                } else {
+                                    // Fallback on earlier versions
+                                }
+                                
+                                if #available(iOS 26.0, *) {
+                                    Button(action: {
+                                        DispatchQueue.main.async {
+                                            let babyInfoView = BabyInfoCardView(baby: baby, records: records, selectedDate: selectedDate)
+                                            let image = babyInfoView.asUIImage()
+                                            
+                                            self.previewImage = IdentifiableImage(image: image)
+                                            
+                                            let formatter = DateFormatter()
+                                            formatter.dateFormat = "yyyyMMdd"
+                                            self.fileNameInput = "\(formatter.string(from: selectedDate))_기록 분석"
+                                        }
+                                    }) {
+                                        Image(systemName: "square.and.arrow.up")
+                                            .foregroundColor(.primary)
+                                            .font(.title2)
+                                            .frame(width: 44, height: 44)
+                                            .background(Color.clear)
+                                            .contentShape(Rectangle())
+                                    }
+                                    .glassEffect()
+                                } else {
+                                    // Fallback on earlier versions
+                                }
+                            }
                         }
                         .padding(.top, 14)
                         .padding(.bottom, 10)
